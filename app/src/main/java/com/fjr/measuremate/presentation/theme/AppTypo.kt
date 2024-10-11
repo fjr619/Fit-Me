@@ -9,114 +9,116 @@ import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.compose.ui.unit.sp
 import com.fjr.measuremate.R
 
-val provider = GoogleFont.Provider(
+private val provider = GoogleFont.Provider(
     providerAuthority = "com.google.android.gms.fonts",
     providerPackage = "com.google.android.gms",
     certificates = R.array.com_google_android_gms_fonts_certs
 )
 
-val poppinsFontFamily = FontFamily(
+private val poppinsFontFamily = FontFamily(
     Font(
         googleFont = GoogleFont("Poppins"),
         fontProvider = provider
     )
 )
 
+private val baseLine = Typography()
+
 // Set of Material typography styles to start with
 val AppTypo = Typography(
-    displayLarge = TextStyle(
+    displayLarge = baseLine.displayLarge.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W600,
         fontSize = 57.sp,
         lineHeight = 64.sp
     ),
-    displayMedium = TextStyle(
+    displayMedium = baseLine.displayMedium.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 45.sp,
         lineHeight = 52.sp
     ),
-    displaySmall = TextStyle(
+    displaySmall = baseLine.displaySmall.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 36.sp,
         lineHeight = 44.sp
     ),
-    headlineLarge = TextStyle(
+    headlineLarge = baseLine.headlineLarge.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W600,
         fontSize = 32.sp,
         lineHeight = 40.sp
     ),
-    headlineMedium = TextStyle(
+    headlineMedium = baseLine.headlineMedium.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 28.sp,
         lineHeight = 36.sp
     ),
-    headlineSmall = TextStyle(
+    headlineSmall = baseLine.headlineSmall.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 24.sp,
         lineHeight = 32.sp
     ),
-    titleLarge = TextStyle(
+    titleLarge = baseLine.titleLarge.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W500,
         fontSize = 22.sp,
         lineHeight = 28.sp,
         letterSpacing = 0.5.sp
     ),
-    titleMedium = TextStyle(
+    titleMedium = baseLine.titleMedium.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W500,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
-    titleSmall = TextStyle(
+    titleSmall = baseLine.titleSmall.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W500,
         fontSize = 14.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.5.sp
     ),
-    bodyLarge = TextStyle(
+    bodyLarge = baseLine.bodyLarge.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
-    bodyMedium = TextStyle(
+    bodyMedium = baseLine.bodyMedium.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 14.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.5.sp
     ),
-    bodySmall = TextStyle(
+    bodySmall = baseLine.bodySmall.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp
     ),
-    labelLarge = TextStyle(
+    labelLarge = baseLine.labelLarge.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W500,
         fontSize = 14.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.5.sp
     ),
-    labelMedium = TextStyle(
+    labelMedium = baseLine.labelMedium.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W500,
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp
     ),
-    labelSmall = TextStyle(
+    labelSmall = baseLine.bodySmall.copy(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W500,
         fontSize = 11.sp,

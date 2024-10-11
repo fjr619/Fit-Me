@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotin.plugin.compose)
     alias(libs.plugins.devtools.ksp)
     alias(libs.plugins.kotlinx.serialization)
+//    alias(libs.plugins.google.services)
 }
 
 android {
@@ -35,6 +36,7 @@ android {
         }
     }
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
@@ -86,9 +88,26 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    implementation(libs.androidx.material3.windowSizeClass)
+    implementation(libs.androidx.navigation.compose)
+
     implementation(libs.bundles.koin)
     ksp(libs.koin.ksp.compiler)
 
+    implementation(libs.coil.compose)
     implementation(libs.splashscreen)
     implementation(libs.google.fonts)
+    implementation(libs.androidx.material3.windowSizeClass)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
+
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+
+    implementation(libs.credentials.play.services.auth)
+    implementation(libs.credentials)
+    implementation(libs.googleid)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
 }
