@@ -23,7 +23,7 @@ val poppinsFontFamily = FontFamily(
 )
 
 // Set of Material typography styles to start with
-val Typography = Typography(
+val AppTypo = Typography(
     displayLarge = TextStyle(
         fontFamily = poppinsFontFamily,
         fontWeight = FontWeight.W600,
