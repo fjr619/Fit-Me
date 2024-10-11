@@ -1,4 +1,4 @@
-package com.fjr.measuremate.ui.theme
+package com.fjr.measuremate.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

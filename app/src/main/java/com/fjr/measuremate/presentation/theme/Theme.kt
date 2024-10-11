@@ -1,6 +1,5 @@
-package com.fjr.measuremate.ui.theme
+package com.fjr.measuremate.presentation.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
