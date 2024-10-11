@@ -10,11 +10,11 @@ plugins {
 }
 
 android {
-    namespace = "com.fjr.measuremate"
+    namespace = "com.fjr.fitme"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.fjr.measuremate"
+        applicationId = "com.fjr.fitme"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

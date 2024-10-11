@@ -1,4 +1,4 @@
-package com.fjr.measuremate.presentation.theme
+package com.fjr.fitme.presentation.theme
 
 import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.staticCompositionLocalOf

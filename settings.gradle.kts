@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Measure Mate"
+rootProject.name = "Fit Me"
 include(":app")
  

@@ -1,4 +1,4 @@
-package com.fjr.measuremate
+package com.fjr.fitme
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.fjr.measuremate
+package com.fjr.fitme
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

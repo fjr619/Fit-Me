@@ -1,4 +1,4 @@
-package com.fjr.measuremate.presentation.theme
+package com.fjr.fitme.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
@@ -36,7 +36,7 @@ object AppTheme {
 }
 
 @Composable
-fun MeasureMateTheme(
+fun FitMeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,

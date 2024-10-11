@@ -1,4 +1,4 @@
-package com.fjr.measuremate.di
+package com.fjr.fitme.di
 
 import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module

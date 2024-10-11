@@ -1,4 +1,4 @@
-package com.fjr.measuremate.presentation.theme
+package com.fjr.fitme.presentation.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.unit.Dp
@@ -14,4 +14,5 @@ class AppDimens(
     val space32: Dp = 32.dp,
     val space40: Dp = 40.dp,
     val space100: Dp = 100.dp,
+    val space120: Dp = 120.dp
 )
