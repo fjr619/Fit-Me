@@ -34,8 +34,8 @@ fun SigninScreen(
 ) {
     val windowSize = LocalWindowSize.current
 
-    when (windowSize.widthSizeClass) {
-        WindowWidthSizeClass.Compact -> {
+//    when (windowSize.widthSizeClass) {
+//        WindowWidthSizeClass.Compact -> {
             Column(
                 modifier = modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -61,7 +61,7 @@ fun SigninScreen(
                         style = MaterialTheme.typography.headlineLarge
                     )
                     Text(
-                        text = "Measure progress, not perfection",
+                        text = "Aim for better, not perfect",
                         style = MaterialTheme.typography.bodyLarge.copy(fontStyle = FontStyle.Italic),
                     )
                 }
@@ -76,11 +76,11 @@ fun SigninScreen(
                         onClick = {}
                     )
                 }
-            }
-        }
+//            }
+//        }
+//
+//        else -> {
 
-        else -> {
-
-        }
+//        }
     }
 }

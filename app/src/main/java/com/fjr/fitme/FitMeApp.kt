@@ -6,11 +6,11 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.ksp.generated.module
 
-class MeasureMateApp: Application() {
+class FitMeApp: Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            androidContext(this@MeasureMateApp)
+            androidContext(this@FitMeApp)
             modules(
                 AppModule().module
             )
