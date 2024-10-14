@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import com.fjr.fitme.R
 import com.fjr.fitme.presentation.theme.FitMeTheme
@@ -60,12 +61,12 @@ fun GoogleSignInButton(
     }
 }
 
-@Preview
+@PreviewLightDark
 @Composable
 private fun GoogleSignInButtonPreview() {
     FitMeTheme {
         GoogleSignInButton(
-            loadingState = true,
+            loadingState = false,
             onClick = {}
         )
     }

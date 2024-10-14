@@ -110,4 +110,8 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+
+    implementation ("com.airbnb.android:lottie:6.5.2")
+    implementation ("com.airbnb.android:lottie-compose:6.5.2")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }

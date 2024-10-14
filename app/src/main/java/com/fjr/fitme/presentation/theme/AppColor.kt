@@ -2,8 +2,10 @@ package com.fjr.fitme.presentation.theme
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 
+@Immutable
 abstract class AppColor {
     abstract val primary: Color
     abstract val onPrimary: Color
@@ -44,6 +46,7 @@ abstract class AppColor {
     //add custom color in here
 }
 
+@Immutable
 internal class AppColorLight() : AppColor() {
     override val primary: Color
         get() = Color(0xFF00677C)
@@ -117,6 +120,7 @@ internal class AppColorLight() : AppColor() {
         get() = Color(0xFFD6DBDD)
 }
 
+@Immutable
 internal class AppColorDark() : AppColor() {
     override val primary: Color
         get() = Color(0xFF86D1E9)

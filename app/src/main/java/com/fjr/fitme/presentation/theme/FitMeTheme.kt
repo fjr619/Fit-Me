@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 
-object AppTheme {
+object FitMeTheme {
     val color: AppColor
         @Composable
         @ReadOnlyComposable
@@ -19,10 +19,10 @@ object AppTheme {
         @ReadOnlyComposable
         get() = LocalTypography.current
 
-    val dimens: AppDimens
-        @Composable
-        @ReadOnlyComposable
-        get() = LocalDimens.current
+//    val dimens: AppDimens
+//        @Composable
+//        @ReadOnlyComposable
+//        get() = LocalDimens.current
 
     val radius: AppRadius
         @Composable
@@ -67,7 +67,7 @@ fun FitMeTheme(
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
-            typography = AppTheme.typography,
+            typography = FitMeTheme.typography,
             content = content
         )
     }

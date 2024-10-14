@@ -27,23 +27,26 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.fjr.fitme.presentation.screens.SigninScreen
-import com.fjr.fitme.presentation.theme.AppTheme
 import com.fjr.fitme.presentation.theme.FitMeTheme
-import com.fjr.fitme.presentation.util.LocalWindowSize
-
+import com.fjr.fitme.presentation.util.LocalWindowWidthSize
 
 class MainActivity : ComponentActivity() {
+    override fun onStop() {
+        super.onStop()
+        finish()
+    }
+
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         installSplashScreen()
         enableEdgeToEdge()
+        super.onCreate(savedInstanceState)
         setContent {
             FitMeTheme {
                 val windowSizeClass = calculateWindowSizeClass(activity = this)
 
                 CompositionLocalProvider(
-                    LocalWindowSize provides windowSizeClass
+                    LocalWindowWidthSize provides windowSizeClass.widthSizeClass
                 ) {
                     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                         SigninScreen(modifier = Modifier.padding(innerPadding))
@@ -52,51 +55,5 @@ class MainActivity : ComponentActivity() {
 
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-        Row(
-            modifier = modifier
-                .height(IntrinsicSize.Max)
-                .background(
-                    AppTheme.color.error,
-                    shape = RoundedCornerShape(
-                        topStart = AppTheme.radius.extraLarge,
-                        topEnd = AppTheme.radius.extraLarge
-                    )
-                )
-                .border(
-                    border = BorderStroke(width = AppTheme.dimens.space4, AppTheme.color.primary),
-                    shape = RoundedCornerShape(
-                        topStart = AppTheme.radius.extraLarge,
-                        topEnd = AppTheme.radius.extraLarge
-                    )
-                )
-                .padding(AppTheme.dimens.space24),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(AppTheme.dimens.space8)
-        ) {
-//            Icon(
-//                imageVector = AppTheme.drawable.iconPause,
-//                contentDescription = "",
-//                tint = AppTheme.color.background
-//            )
-            Text(
-                text = "Hello $name! ${LocalWindowSize.current.widthSizeClass}",
-                style = AppTheme.typography.headlineMedium,
-                color = AppTheme.color.background,
-            )
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FitMeTheme {
-        Greeting("Android")
     }
 }
