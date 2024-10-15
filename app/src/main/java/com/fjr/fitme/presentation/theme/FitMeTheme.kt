@@ -14,7 +14,7 @@ object FitMeTheme {
         @ReadOnlyComposable
         get() = LocalColor.current
 
-    val typography: Typography
+    val typography: AppTypo
         @Composable
         @ReadOnlyComposable
         get() = LocalTypography.current
@@ -53,8 +53,8 @@ fun FitMeTheme(
 //        }
 
         darkTheme -> {
-            colorScheme = DarkColors
-            appColor = AppColorDark()
+            colorScheme = DarkColors //material
+            appColor = AppColorDark() //material + custom
         }
         else -> {
             colorScheme = LightColors
@@ -67,7 +67,7 @@ fun FitMeTheme(
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
-            typography = FitMeTheme.typography,
+            typography = Typography(),
             content = content
         )
     }
